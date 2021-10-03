@@ -1,23 +1,27 @@
 class overidingFUNC{
  
-   public void disp()
+   void show()
    {
-	System.out.println("disp() method of parent class");
+	System.out.println("This is running overriding function");
    }	   
 }
-class Demo extends ABC{
+class Demo extends overidingFUNC{
+@override
+
  
-   public void disp(){
-	System.out.println("disp() method of Child class");
+   void show()
+   {
+	System.out.println("This is overriding method of parent");
    }
-   public void newMethod(){
-	System.out.println("new method of child class");
-   }
-   public static void main( String args[]) {
+}
+   class Main{
+   
+   public static void main( String args[])
+   {
 	overidingFUNC obj = new overidingFUNC();
 	obj.disp();
 
-	ABC obj2 = new Demo();
+	overidingFUNC obj2 = new Demo();
 	obj2.disp();
    }
 }
